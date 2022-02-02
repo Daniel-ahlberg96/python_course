@@ -19,8 +19,6 @@ Function and class syntax. private, protected attributes.
 Mypy (optional static tyiping). 
 
 ## Project content
-Consultant Company structure, YABS as an example. 
-
 Data structures:
 - Lists (not bounded by type)
 - Tuples
@@ -39,6 +37,29 @@ Classes:
 - Magic methods (double underscores), show by `dir(int)`,  `__str__` simple examples 
 - Inheritance
 - Decorators
+
+## Project structure
+### Task manager
+Features:
+- Multiple users
+- Show tasks
+- Select tasks
+- Edit tasks
+- Show due tasks
+
+Users:
+- Hash table to store users
+
+Tasks:
+- Name
+- Description
+- Priority
+
+Dated task:
+- Inheritance from task
+- Add date
+- Method to check if date exeeded
+
 
 
 
