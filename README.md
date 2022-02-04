@@ -14,6 +14,19 @@ Python is a object oriented programming language. Dynamically and a strong typed
 Interpreter does not know the type of a variable before runtime. Variables can change type during runtime.
 High level programming lanuguage, no memory handling, drawback is performance.
 
+## Basic syntax
+### Print:
+- write to stdout
+- string formatting
+- New string formatting with python 3.6+, use "f" prefix. Works with strings, integers, floats.
+
+### Strings:
+- Iterable
+- Indexing, specifically -1
+- `in`
+ Comparison:
+ - `==` and `is`. `is` compares object references. `==` compares equality. Generally use `==`
+
 ## Syntax
 Function and class syntax. private, protected attributes.
 Mypy (optional static tyiping). 
