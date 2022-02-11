@@ -1,3 +1,6 @@
+# TODO
+# Create another test with lists, multiple types? Split?
+
 # Basic syntax, loops, conditional statements and strings
 # Content:
 # - print() and string formatting
