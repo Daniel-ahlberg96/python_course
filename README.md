@@ -15,6 +15,12 @@ Interpreter does not know the type of a variable before runtime. Variables can c
 High level programming lanuguage, no memory handling, drawback is performance.
 
 ## Basic syntax
+### Functions
+- Indentations
+- No return statement
+- Pass by value or reference
+- Multiple arguments
+
 ### Print:
 - write to stdout
 - string formatting

@@ -1,7 +1,14 @@
-from pickletools import string1
-from time import time
 import timeit
 from basic_syntax import *
+
+def invalid_characters_nested(username, invalid_character_list):
+    return_list = []
+    for char in invalid_character_list:
+        for letter in username:
+            if char == letter:
+                return_list.append(char)
+
+    return return_list
 
 def check_username_test():
     USERNAME = "python_is_great!"
