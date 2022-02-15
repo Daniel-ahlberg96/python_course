@@ -1,5 +1,5 @@
 # TODO
-# Create another test with lists, multiple types? Split?
+# Create another test with lists, multiple types? Split? Pass by reference
 
 # Basic syntax, loops, conditional statements and strings
 # Content:
@@ -52,3 +52,4 @@ def invalid_characters_set(username, character_set):
 
 if __name__ == "__main__":
     getting_started("dsad", 1)
+    

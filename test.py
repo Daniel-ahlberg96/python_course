@@ -1,3 +1,4 @@
+from pickletools import string1
 from time import time
 import timeit
 from basic_syntax import *
@@ -24,6 +25,7 @@ def check_in_operator():
     t2 = timeit.timeit(lambda: in_operator(set_range), number=100)
 
     print(f"List: {t1}, Set: {t2}")
+
 if __name__ == "__main__":
     check_username_test()
     check_in_operator()
