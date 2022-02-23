@@ -26,6 +26,16 @@ def variables():
     print("Python" == "Python")
 
 ###############################################################################
+# Standard output
+def stdout():
+    string = "hej x "
+    integer = 2
+    print(string, integer)
+    print("Hello world") # New line automatically
+    print_out = f"jag säger {string} {integer} gånger"
+    print(print_out)
+
+###############################################################################
 # Strings
 def strings():
     # Indexing
@@ -50,16 +60,6 @@ def strings():
 
     dir(s)
     c = "R".lower()
-
-###############################################################################
-# Standard output
-def stdout():
-    string = "hej x "
-    integer = 2
-    print(string, integer)
-    print("Hello world") # New line automatically
-    print_out = f"jag säger {string} {integer} gånger"
-    print(print_out)
 
 ###############################################################################
 # Functions
