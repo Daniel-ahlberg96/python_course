@@ -1,7 +1,6 @@
 # TODO
-# Use debuging in test
-# Run individual tests
 # Add test for encrypt_multiple_passwords() and invalid_characters_in()
+
 from basic_syntax import *
 import pytest
 
@@ -47,7 +46,25 @@ class TestAll():
         password_list = [[2, "password"], [2, "second_password"]]
         expected_password_list = [[2, "password"], [2, "second_password"], [1, "wordRpass"]]
         add_to_list(password, password_list)
+        
+        assert len(password_list) == len(expected_password_list)
         for index in range(len(password_list)):
             assert password_list[index] == expected_password_list[index]
+
+    def test_encrypt_multiple_passwords(self):
+        passwords = """
+password
+second_password
+python_is_nr1
+password
+"""
+        expected_password_list = [[2, 'wordRpass'], [1, 'asswordRsecond_p'], [1, 'is_nr1Rpython_']]
+        encrypted_password_list = encrypt_multiple_passwords(passwords)
+        
+        assert len(encrypted_password_list) == len(expected_password_list)
+        for index in range(len(expected_password_list)):
+            assert encrypted_password_list[index] == expected_password_list[index]
+
+
         
 

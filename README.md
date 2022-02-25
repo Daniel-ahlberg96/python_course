@@ -15,10 +15,17 @@ Interpreter does not know the type of a variable before runtime. Variables can c
 High level programming lanuguage, no memory handling, drawback is performance.
 
 ## Basic syntax
-### Functions
+
+### Variables:
+- Object, type not determined in compile time
+- Convention, undersore to separate words
+- Globla, local and constants
+
+### Functions:
 - Indentations
 - No return statement
 - Pass by value or reference
+- MyPy, optional static typing
 - Multiple arguments
 
 ### Print:
@@ -27,11 +34,39 @@ High level programming lanuguage, no memory handling, drawback is performance.
 - New string formatting with python 3.6+, use "f" prefix. Works with strings, integers, floats.
 
 ### Strings:
+- Define by `''` or `""`
 - Iterable
 - Indexing, specifically -1
 - `in`
  Comparison:
  - `==` and `is`. `is` compares object references. `==` compares equality. Generally use `==`
+
+### Lists and Tuples:
+- Arrys, dynamic size
+- Indexing samed as string
+- Type does not matter, can contain other lists
+- Add and remove items, `append`, `del`
+- Tuples are immutable
+- Can assign variables to index
+- Passed as refernece to functions
+
+### For loops:
+- Can loop through iterators
+- Range
+- Enumerate?
+- List comprehension (Faster when creating lists)
+
+### Dictionaries
+- Direct lookup
+- Hashed
+- Ordered (as of python 3.7)
+
+### Inner functions
+- Encapusaltion
+- Helper functions
+- Decorators (possibly move to next part of course)
+
+---
 
 ## Syntax
 Function and class syntax. private, protected attributes.
