@@ -49,7 +49,7 @@ def strings():
     s[len(s) - 1]
     s[-1]
 
-    # Concenation
+    # Concatenation (sammanlänkning)
     vem = "jag "
     gör = "äter "
     vad = "friscomål"

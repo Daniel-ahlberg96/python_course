@@ -43,7 +43,7 @@ High level programming lanuguage, no memory handling, drawback is performance.
 ### Functions
 - Indentations
 - No return statement
-- Pass by value or reference
+- Pass by value or reference (CHECK!)
 - Multiple arguments
 
 ### Print:
