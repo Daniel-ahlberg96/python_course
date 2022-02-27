@@ -14,6 +14,31 @@ Python is a object oriented programming language. Dynamically and a strong typed
 Interpreter does not know the type of a variable before runtime. Variables can change type during runtime.
 High level programming lanuguage, no memory handling, drawback is performance.
 
+## Variables
+- Does not need explicit declaration
+- Five standard types:
+    - String
+    - Numbers
+    - List
+    - Tuple
+    - Dictionary
+
+- Three types of types
+    - String (str)
+    - Integer (int)
+    - Float (float)
+
+- Naming convension (underscore)
+- Multiple assignment
+
+## Operators
+-  Operators (+=, //, <=,  etc.) works on strings
+
+## Convension
+- PEP 8 style guide
+- Black
+- help()
+
 ## Basic syntax
 
 ### Variables:
@@ -24,8 +49,7 @@ High level programming lanuguage, no memory handling, drawback is performance.
 ### Functions:
 - Indentations
 - No return statement
-- Pass by value or reference
-- MyPy, optional static typing
+- Pass by value or reference (CHECK!)
 - Multiple arguments
 
 ### Print:
@@ -36,6 +60,7 @@ High level programming lanuguage, no memory handling, drawback is performance.
 ### Strings:
 - Define by `''` or `""`
 - Iterable
+- Constant
 - Indexing, specifically -1
 - `in`
  Comparison:
