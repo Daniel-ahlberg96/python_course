@@ -1,12 +1,10 @@
 # Variables, int, floats and strings
 def variables():
-    a = "Python" # Points to same memory location
-    b = 'Python'
+    a = "Python"  # Points to same memory location
+    b = "Python"
 
     id(a)
     id(b)
-
-    print(id(a), id(b))
 
     a is b
 
@@ -14,16 +12,17 @@ def variables():
     int2 = 5
 
     float1 = 5.0
-    kvot = 5//2 # Floor division
+    kvot = 5 // 2  # Floor division
 
-    a, b = 5, 6 # Multiple assignment
+    a, b = 5, 6  # Multiple assignment
 
-    python_string = "\npython\n is great!" # Naming convension
+    python_string = "\npython\n is great!"  # Naming convension
     CAPITAL_LETTERS = "this is a constant by convension"
-    
+
     print(int1 == float1)
 
     print("Python" == "Python")
+
 
 ###############################################################################
 # Standard output
@@ -31,9 +30,10 @@ def stdout():
     string = "hej x "
     integer = 2
     print(string, integer)
-    print("Hello world") # New line automatically
+    print("Hello world")  # New line automatically
     print_out = f"jag säger {string} {integer} gånger"
     print(print_out)
+
 
 ###############################################################################
 # Strings
@@ -42,10 +42,8 @@ def strings():
     s = "Python"
     s[0]
     s[0:3]
-    
     s[:3]
     s[3:]
-
     s[len(s) - 1]
     s[-1]
 
@@ -61,15 +59,18 @@ def strings():
     dir(s)
     c = "R".lower()
 
+
 ###############################################################################
 # Functions
 def print_last_two_letters(word: str) -> None:
-    print(word[-3:]) # Indentation
+    print(word[-3:])  # Indentation
+
 
 def magic_food(number: int, food: str) -> str:
     print(f"Jag har {number} av {food}")
-    number += 10 # Pass by value
+    number += 10  # Pass by value
     return f"Nu har jag {number} av {food}. MAGISKT!"
+
 
 if __name__ == "__main__":
     nr_of_food = 10
@@ -77,4 +78,3 @@ if __name__ == "__main__":
     new_nr_of_food = magic_food(nr_of_food, food)
     print(new_nr_of_food)
     print_last_two_letters("hejdå")
-

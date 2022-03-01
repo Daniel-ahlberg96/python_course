@@ -9,8 +9,10 @@ Venv?
 ## Language background
 Default implemnetation called CPython. This is what you will download. Compiled Python code into bytecode. Other implementation which won't be covered.
 
-Python is a object oriented programming language. Dynamically and a strong typed language. EVERYTHING in python is an object.
-(example in the future)
+Python is a object oriented programming language. Dynamically and a strong typed language. 
+The type of a variable is determined in runtime.
+Type matters when performing an operation.
+EVERYTHING in python is an object.
 Interpreter does not know the type of a variable before runtime. Variables can change type during runtime.
 High level programming lanuguage, no memory handling, drawback is performance.
 

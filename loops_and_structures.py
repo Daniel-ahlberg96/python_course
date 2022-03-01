@@ -10,31 +10,34 @@ def conditional_statement(x: int):
 
     elif x // 2 != (x + 1) // 2:
         print(f"{x} is an uneven number")
-    
+
     else:
         print(f"{x} is an even number")
 
+
 ###############################################################################
 # Iteration
-def character_in_password_(password: str) -> bool:    
+def character_in_password_(password: str) -> bool:
     for letter in password:
         if letter == "Ö":
             return True
-    
+
     return False
+
 
 # In operator
 def password_in_password(password: str) -> bool:
     "password" in password
 
-    return True if "password" in password else False # Iterate through string
+    return True if "password" in password else False  # Iterate through string
+
 
 ###############################################################################
 # Lists and tuples
 def lists():
-    numbers_and_vegetables = [0, 1, 2, "apelsin", "äpple", "gurka"] # Type invariant
+    numbers_and_vegetables = [0, 1, 2, "apelsin", "äpple", "gurka"]  # Type invariant
 
-    ls = [1, 2, 3, 4, 5] # 'list' is a reserved keyword
+    ls = [1, 2, 3, 4, 5]  # 'list' is a reserved keyword
     ls[-1] = "Slut på nummer"
     ls[-2:]
     list("foooood")
@@ -43,35 +46,47 @@ def lists():
     for number in ls:
         new_number = number * 10
         new_list.append(new_number)
-    
-    
-    new_list = [number * 10 for number in ls] # List comprehension
+
+    new_list = [number * 10 for number in ls if number % 2 == 0]  # List comprehension
     print(new_list)
+    id(new_list)
+
+    ls = [1, 2, 3, 4]
+    print(id(ls))
+    change_list(ls)
+
+
+def change_list(ls: list):
+    ls.append(5)
+    print(id(ls))
+
 
 def tuples():
     allowed_vegetables = (1, 2, 3, 4, 5)
     allowed_vegetables[-1] = "slut på nummer"
     allowed_vegetables.append(6)
 
+
 def useful_list_functions():
-    vegetables_list = ["appelsin", "äpple", "tomat"]
-    
+    vegetables_list = ["apelsin", "äpple", "tomat"]
+
     vegetables_string = ""
     for vegetable in vegetables_list:
         vegetables_string += vegetable + " "
-    
+
     print(vegetables_string)
-    
+
     vegetables_string = " ".join(vegetables_list)
     print(vegetables_string)
 
     vegetables_list = vegetables_string.split()
     print(vegetables_list)
-    
+
+
 ###############################################################################
 # Sets and dictionaries
 def dictionaries():
-    name_to_food = {"daniel": "max"} # Key and value
+    name_to_food = {"daniel": "max"}  # Key and value
     name_to_food["daniel"]
     name_to_food["namn"] = "mat"
     # name_to_food["max"] # Error
@@ -88,7 +103,6 @@ def dictionaries():
     # Optional, if time
     for key, value in name_to_food.items():
         print(key, value)
-
 
 
 if __name__ == "__main__":
