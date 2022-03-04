@@ -96,10 +96,10 @@ def invalid_characters(username: str) -> list:
     1)
     function input:
         username = "my_user@name!"
-    
+
     function output:
         ['@', '!']
-    
+
     2)
     function input:
         username = "?is_this_a(valid)_.username.
@@ -124,7 +124,7 @@ def add_to_list(password: str, occ_password_list: list) -> None:
     number_of_password_occurences (int)     - counts how many times password has been used
     password (str)                          - a password string
 
-    If the password cannot be found in any password_list, 
+    If the password cannot be found in any password_list,
     then append the occ_password_list with a new password_list with the format:
 
     [1, password]
@@ -132,14 +132,14 @@ def add_to_list(password: str, occ_password_list: list) -> None:
     If the password is found in a password_list,
     then increment the number_of_password_occurences in the password_list containing the password.
 
-    
+
     Examples
     ------------
     1)
     function input:
         password = "password"
         occ_password_list = [[2, "password"], [1, "second_password"]]
-    
+
     occ_password_list after function completes:
         occ_password_list = [[3, "password"], [1, "second_password"]]
 
@@ -147,7 +147,7 @@ def add_to_list(password: str, occ_password_list: list) -> None:
     function input:
         password = "unique_password"
         occ_password_list = [[2, "password"], [1, "second_password"]]
-    
+
     occ_password_list after function completes:
         occ_password_list = [[2, "password"], [1, "second_password"], [1, unique_password]]
 
@@ -177,17 +177,17 @@ def add_multiple_passwords(passwords: str) -> list:
                      password1\n
                      password\n
                      random_password"
-    
+
     function output:
         [[2, password], [1, password1], [1, random_password]]
 
-    
+
     2)
     function input:
         passwords = "just_one_password\n
                      just_one_password\n
                      just_one_password"
-    
+
     function output:
         [[3, just_one_password]]
 
@@ -219,7 +219,7 @@ def create_password_dict(csv_file: str) -> dict:
     A csv file (comma separated value) with services, usernames and passwords
     needs to be converted into a dictionary format in order to access the items easily.
     The csv file contain multiple lines and where line looks like:
-    
+
     service;username;password
 
     OR
@@ -242,10 +242,10 @@ def create_password_dict(csv_file: str) -> dict:
         csv_file = "google;yabs;super_pass\n
                     steam;pwner1337;\n
                     twitter;just_small_talk;this_is_not_secure"
-    
+
     function output:
         {"google": ("yabs", _passSsuper), "steam": ("pwner1337", osqf7bas6z9kptvm), "twitter": (just_small_talk, ot_secureRthis_is_n)}
-    
+
     """
     line_list = csv_file.split()
     password_dict = {}
@@ -270,5 +270,8 @@ def check_password_length(password):
 if __name__ == "__main__":
     print(encrypt("this_is_not_secure"))
     print(generate_password())
-    print(create_password_dict("google;yabs;super_pass\nsteam;pwner1337;\ntwitter;just_small_talk;this_is_not_secure"))
-    
+    print(
+        create_password_dict(
+            "google;yabs;super_pass\nsteam;pwner1337;\ntwitter;just_small_talk;this_is_not_secure"
+        )
+    )
