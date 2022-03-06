@@ -1,5 +1,6 @@
 from helper_functions import generate_password, encrypt_string
 from typing import TypeVar
+from datetime import datetime
 
 
 def food_to_price(food_list: list) -> str:
@@ -77,7 +78,6 @@ TPasswordData = TypeVar("TPasswordData", bound="PasswordData")
 
 
 class PasswordData:
-
     """
     Implement an init method for the PasswordData class.
     This class should take 2 arguments:
@@ -100,10 +100,6 @@ class PasswordData:
         self.username = username
         self.password = password
         self.encrypted_password = encrypt_string(password)
-
-    def change_password(self, password):
-        self.password = password
-        self.__encrypted_password = encrypt_string(password)
 
     def remove_username_digits(self) -> None:
         """
@@ -145,10 +141,51 @@ class PasswordData:
         return f"PasswordData(username={self.username}, password={self.password})"
 
 
-class TimePasswordData(PasswordData):
-    def __init__(self):
-        super().__init__()
+TTimePasswordData = TypeVar("TTimePasswordData", bound="TimePasswordData")
 
+class TimePasswordData(PasswordData):
+    def __init__(self, username, password):
+        """
+        Inizialise (inherit) the parent Password data class and create a
+        new specific attribute (timestamp) for the TimePasswordData class.
+        This attribute should be made private to remove write access for users
+        of this class.
+
+        Attributes:
+            public:
+                username            --  Inherited from PasswordData 
+                password            --  Inherited from PasswordData
+                encrypted_password  --  Inherited from PasswordData
+            
+            private:
+                timestamp           --  The current date and time. 
+                                        Use datetime.now() to get a date object.
+                                        See dir(datetime.now()) for object attributes.
+                                        As an example: To access the current month
+                                        use datetime.now().month
+               
+        """
+        super().__init__(username, password)
+        self.__timestamp = datetime.now()
+    
+    def update_username(self, new_username: str):
+        """
+        Update the username attribute with a new_username.
+        The username can only be updated if the object instance was 
+        NOT created on christmas eve (12/24). Use the timestamp 
+        attribute to check this condition.
+        
+        """
+        if self.__timestamp.month != 12 and self.__timestamp.day != 24:
+            self.username = new_username
+
+    def __eq__(self, other: TTimePasswordData) -> bool:
+        """
+        Implement a == operator for the TimePasswordData class.
+        Try to use the __eq__ operator from the PasswordData class
+        when implementing this magic method.  
+        """
+        return super().__eq__(other) and self.__timestamp.year == other.__timestamp.year
 
 if __name__ == "__main__":
     # print(food_to_price(["apple", "meat", "bread", "grillkrydda"]))
@@ -156,3 +193,9 @@ if __name__ == "__main__":
     pd = PasswordData("amaz123ing11", "1234")
     pd2 = PasswordData("amazing", "1234")
     pd.remove_username_digits()
+    tpd = TimePasswordData("test", "123")
+    tpd2 = TimePasswordData("test", "123")
+    print(dir(datetime.now()))
+    tpd.update_username("new")
+
+

@@ -27,7 +27,7 @@ class Supermarket:
 
     #################################################
     # Methods
-    def double_size(self):  # Does everyone understand what a method is?
+    def change_size(self):  # Does everyone understand what a method is?
         self.size *= 2
 
     # Magic methods
@@ -55,7 +55,7 @@ def methods():
     print(dir(supermarket1))
 
     # Implement double_size()
-    supermarket1.double_size()
+    supermarket1.change_size()
     print(supermarket1.size)
 
     print(repr({"mat": "ica"}))

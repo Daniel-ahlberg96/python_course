@@ -8,13 +8,15 @@ class SuperSuperMarket(Supermarket):
 
         # Right way to do it
         super().__init__(name, address, size)
-
+    
         self.size = levels * size
+        
+        # Private attribute
         self.__levels = levels
 
-    def double_size(self):
+    def change_size(self):
         # What will size be when we inherit the method from the parent?
-        self.size = super().double_size()
+        self.size *= 3
 
     # Private attribute
     def get_levels(self):
@@ -27,10 +29,10 @@ def inheritance():
     print(supersupermarket1.size)
 
     # Show what will happen with the inherited method
-    supersupermarket1.double_size()
+    supersupermarket1.change_size()
 
     # Private attributes, make levels private
-    print(SuperSuperMarket.__levels)
+    # print(SuperSuperMarket.__levels)
     print(supersupermarket1.get_levels())
 
     # Mention protected attributes is there is time

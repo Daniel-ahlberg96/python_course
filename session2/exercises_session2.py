@@ -47,7 +47,6 @@ def csv_to_dict(csv_string: str) -> dict:
         csv_string = "clip_master;YouTube\n
                       tweet_legend;Twitter\n
                       aim_god;Steam \n
-                      horse_power;Stallet
 
     function_output:
         {clip_master: 6ubmia6exsf, tweet_legend: hk2l5kmi30slqdpjreb, aim_god: iph7t5clt03i8uo}
@@ -67,5 +66,5 @@ def csv_to_dict(csv_string: str) -> dict:
 
 
 if __name__ == "__main__":
-    # csv_to_dict("test")
-    print(csv_to_dict("clip_master;YouTube\ntweet_legend;Twitter\naim_god;Steam"))
+    food_to_price(["apple", "meat", "bread", "grillkrydda"])
+    # print(csv_to_dict("clip_master;YouTube\ntweet_legend;Twitter\naim_god;Steam"))
