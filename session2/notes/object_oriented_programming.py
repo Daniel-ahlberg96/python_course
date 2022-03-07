@@ -1,9 +1,22 @@
+def imports():
+    import math # Import an entire module
+    math.pi # Namespace
+
+    from math import pi # Specific function
+
+    import helper_functions # File name
+    
+    helper_functions.ABC123 # Constant in file
+    from helper_functions import ABC123, example_function # Multiple imports
+
+    print(ABC123)
+
 # #######################################################
 # Object oriented programming, what a class is, __init__
 def bad_way_of_representing_data():
     food = {
         "ICA": ["matgatan 1", 200],
-        "COOP": ["matgatan 2", 300],
+        "COOP": ["matgatan 2", 300]
     }  # Ugly, better way to generalizing data?
 
     ica_property = food["ICA"]
@@ -75,3 +88,4 @@ def methods():
 if __name__ == "__main__":
     bad_way_of_representing_data()
     methods()
+    

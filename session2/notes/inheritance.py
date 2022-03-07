@@ -1,7 +1,7 @@
 from object_oriented_programming import Supermarket
 
 
-class SuperSuperMarket(Supermarket):
+class SuperSupermarket(Supermarket):
     def __init__(self, name: str, address: str, size: int, levels: int):
         # First way of doing it
         # Supermarket.__init__(self, name, address, size)
@@ -22,9 +22,11 @@ class SuperSuperMarket(Supermarket):
     def get_levels(self):
         return self.__levels
 
+    def __repr__(self):
+        return f"SuperSupermarket(name={self.name}, address={self.address}, size={self.size}, levels={self.__levels})"
 
 def inheritance():
-    supersupermarket1 = SuperSuperMarket("ica", "matgatan 4", size=200, levels=2)
+    supersupermarket1 = SuperSupermarket("ica", "matgatan 4", size=200, levels=2)
     # Can still access methods and attributres from the parent
     print(supersupermarket1.size)
 

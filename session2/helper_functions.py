@@ -39,6 +39,8 @@ ABC123 = (
     "9",
 )
 
+def example_function() -> str:
+    print("This is an example function")
 
 def generate_password() -> str:
     """

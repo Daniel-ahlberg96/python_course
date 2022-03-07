@@ -66,5 +66,5 @@ def csv_to_dict(csv_string: str) -> dict:
 
 
 if __name__ == "__main__":
-    food_to_price(["apple", "meat", "bread", "grillkrydda"])
+    print(food_to_price(["apple", "meat", "bread", "grillkrydda"]))
     # print(csv_to_dict("clip_master;YouTube\ntweet_legend;Twitter\naim_god;Steam"))
